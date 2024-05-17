@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.VBox?>
+<HBox fx:controller="com.taxiapp.desktop.menupages.dashboard.infopages.OrderInfoController"
+ xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1"
+  AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+  AnchorPane.topAnchor="0.0"  AnchorPane.bottomAnchor="0.0">
+  <children>
+      <VBox fx:id="contentBox" HBox.hgrow="ALWAYS" spacing="20.0" style="-fx-background-color: #fff;">
+        <Separator prefHeight="10.0" prefWidth="763.0" />
+        <HBox spacing="40.0">
+          <ImageView fitHeight="70.0" fitWidth="76.0">
+            <image>
+              <Image url="@../../../icons/icon.png" />
+            </image>
+          </ImageView>
+
+          <VBox spacing="10.0">
+            <HBox spacing="10">
+              <Label fx:id="orderTitle"  textFill="#3a1c9d">
+                <font>
+                  <Font name="System Bold" size="18.0" />
+                </font>
+              </Label>
+
+              <Label fx:id="orderIdText" text="Ref: 20178" textFill="#b2b0b0">
+                <font>
+                  <Font name="System Bold" size="18.0" />
+                </font>
+              </Label>
+            </HBox>
+
+
+
+            <HBox spacing="10">
+              <Label text="CLIENT" textFill="#aeacac">
+                <font>
+                  <Font size="14.0" />
+                </font>
+              </Label>
+              <Label fx:id="userNameText" onMouseClicked="#openUserInfoModalPane" textFill="#4d4c4c">
+                <font>
+                  <Font size="13.0" />
+                </font>
+              </Label>
+            </HBox>
+
+            <HBox spacing="10">
+              <Label text="LOCATION FROM" textFill="#aeacac">
+                <font>
+                  <Font size="14.0" />
+                </font>
+              </Label>
+              <Label fx:id="locationFromText" text="London" textFill="#4d4c4c">
+                <font>
+                  <Font size="13.0" />
+                </font>
+              </Label>
+            </HBox>
+
+            <HBox spacing="10">
+              <Label text="LOCATION TO" textFill="#aeacac">
+                <font>
+                  <Font size="14.0" />
+                </font>
+              </Label>
+              <Label fx:id="locationToText" text="Between $190 and $270" textFill="#4d4c4c">
+                <font>
+                  <Font size="13.0" />
+                </font>
+              </Label>
+            </HBox>
+            <HBox spacing="10">
+              <Label text="CLIENT PAYS" textFill="#aeacac">
+                <font>
+                  <Font size="14.0" />
+                </font>
+              </Label>
+              <Label fx:id="priceText" text="1000" textFill="#4d4c4c">
+                <font>
+                  <Font size="13.0" />
+                </font>
+              </Label>
+            </HBox>
+            <HBox spacing="10">
+              <Label text="Ordered" textFill="#aeacac">
+                <font>
+                  <Font size="14.0" />
+                </font>
+              </Label>
+              <Label fx:id="orderedAtText" text="1000" textFill="#4d4c4c">
+                <font>
+                  <Font size="13.0" />
+                </font>
+              </Label>
+            </HBox>
+            <HBox spacing="10">
+              <Label text="Finished" textFill="#aeacac">
+                <font>
+                  <Font size="14.0" />
+                </font>
+              </Label>
+              <Label fx:id="finishedAtText" text="1000" textFill="#4d4c4c">
+                <font>
+                  <Font size="13.0" />
+                </font>
+              </Label>
+            </HBox>
+          </VBox>
+
+          <VBox spacing="10.0">
+            <Label text="ORDER TYPE" textFill="#aeacac">
+              <font>
+                <Font size="14.0" />
+              </font>
+            </Label>
+            <Label fx:id="taxiTypeLabel" prefHeight="19.0" prefWidth="44.0" style="-fx-background-color: #aeacac;" textFill="#fffefe">
+              <font>
+                <Font size="13.0" />
+              </font>
+            </Label>
+          </VBox>
+        </HBox>
+
+        <Separator prefHeight="0.0" prefWidth="763.0" />
+
+        <Separator prefHeight="0.0" prefWidth="0.0" orientation="VERTICAL" />
+      </VBox>
+    <VBox minWidth="300" style="-fx-background-color: #456"></VBox>
+  </children>
+</HBox>

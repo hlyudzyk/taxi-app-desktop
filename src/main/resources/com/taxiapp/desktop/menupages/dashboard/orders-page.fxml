@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox  fx:id="rootBox" xmlns="http://javafx.com/javafx"
+  xmlns:fx="http://javafx.com/fxml"
+  fx:controller="com.taxiapp.desktop.menupages.dashboard.OrdersPageController"
+  AnchorPane.leftAnchor="0.0"
+  AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"  AnchorPane.bottomAnchor="0.0">
+
+  <VBox fx:id="contentBox"
+     HBox.hgrow="ALWAYS" spacing="20.0" style="-fx-background-color: #000;" />
+
+  <AnchorPane  style="-fx-background-color: LIGHTGRAY">
+    <VBox fx:id="filterBox" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" minWidth="150.0" spacing="5" alignment="TOP_CENTER">
+      <Label text="Filter Options"/>
+      <Spinner fx:id="pageSpinner" initialValue="0" amountToStepBy="1" prefWidth="120" editable="true"/>
+      <Spinner fx:id="limitSpinner" initialValue="10" amountToStepBy="1" prefWidth="120" editable="true"/>
+      <TextField fx:id="userIdField" promptText="user id"/>
+      <TextField fx:id="locationFromField" promptText="location from"/>
+      <TextField fx:id="locationToField" promptText="location to"/>
+      <DatePicker fx:id="orderDatePicker"/>
+      <ComboBox fx:id="orderStatusComboBox" prefWidth="150" >
+      </ComboBox>
+    </VBox>
+    <Button fx:id="newOrderButton" AnchorPane.bottomAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.leftAnchor="0" text="New order"/>
+  </AnchorPane>
+
+</HBox>

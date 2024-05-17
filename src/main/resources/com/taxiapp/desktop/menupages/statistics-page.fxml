@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.chart.XYChart?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Separator?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+  xmlns:fx="http://javafx.com/fxml"
+  fx:controller="com.taxiapp.desktop.menupages.StatisticsPageController"
+  AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+  AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+  <VBox fx:id="mainPane" style="-fx-background-color: LIGHTGRAY" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" alignment="TOP_CENTER" spacing="5">
+    <TextField text="STATISTICS" style="-fx-font-size: 20" editable="false"/>
+    <HBox spacing="10" alignment="CENTER">
+      <HBox>
+        <TextField text="Select date after: " editable="false"/>
+        <DatePicker fx:id="afterDatePicker"/>
+      </HBox>
+
+      <HBox>
+        <TextField text="Select date before: " editable="false"/>
+        <DatePicker fx:id="beforeDatePicker"/>
+      </HBox>
+    </HBox>
+    <HBox fx:id="chartsPane" VBox.vgrow="ALWAYS">
+      <PieChart fx:id="ratioChart"/>
+      <Separator prefWidth="2" style="-fx-background-color: gray" prefHeight="600"/>
+    </HBox>
+  </VBox>
+</AnchorPane>

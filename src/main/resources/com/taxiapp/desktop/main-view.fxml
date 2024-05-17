@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<AnchorPane id="AnchorPane" nodeOrientation="LEFT_TO_RIGHT" prefHeight="623.0" prefWidth="1271.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.taxiapp.desktop.MainController">
+  <children>
+    <Pane layoutX="-2.0" prefHeight="145.0" prefWidth="1062.0" stylesheets="@style.css"  styleClass="head-background" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <Label layoutX="224.0" layoutY="47.0" text="Taxi Administrator Workplace" textFill="WHITE">
+          <font>
+            <Font size="36.0" />
+          </font>
+        </Label>
+        <Label layoutX="227.0" layoutY="100.0" text="Since 2015" textFill="WHITE">
+          <font>
+            <Font size="13.0" />
+          </font>
+        </Label>
+        <Button layoutX="1041.0" layoutY="95.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="30.0"
+          prefWidth="163.0" style="-fx-background-color: #473E98;" text="EDIT PROFILE" textFill="WHITE">
+          <font>
+            <Font name="System Bold" size="12.0" />
+          </font>
+        </Button>
+      </children>
+    </Pane>
+    <VBox layoutX="-1.0" layoutY="145.0" prefHeight="438.0" prefWidth="252.0" style="-fx-background-color: #fff;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="146.0">
+      <children>
+        <Label prefHeight="30.0" prefWidth="252.0" text="OVERVIEW" textFill="#171717">
+          <font>
+            <Font size="13.0" />
+          </font>
+          <padding>
+            <Insets left="40.0" />
+          </padding>
+          <VBox.margin>
+            <Insets top="60.0" />
+          </VBox.margin>
+        </Label>
+        <Button fx:id="dashboardButton" onMouseClicked="#onDashboardButtonClicked" alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="43.0" prefWidth="252.0"  text="Dashboard" textFill="#5b5858">
+          <VBox.margin>
+            <Insets />
+          </VBox.margin>
+          <font>
+            <Font size="13.0" />
+          </font>
+          <graphic>
+            <ImageView accessibleText="Project List" fitHeight="16.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@icons/dashboard.png" />
+              </image>
+            </ImageView>
+          </graphic>
+          <padding>
+            <Insets left="50.0" />
+          </padding>
+        </Button>
+        <Button fx:id="statisticsButton" onMouseClicked="#onStatisticsButtonClicked" alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="43.0" prefWidth="252.0"
+          text="Statistics" textFill="#5b5858">
+          <VBox.margin>
+            <Insets />
+          </VBox.margin>
+          <font>
+            <Font size="13.0" />
+          </font>
+          <graphic>
+            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@icons/statistics.png" />
+              </image>
+            </ImageView>
+          </graphic>
+          <padding>
+            <Insets left="50.0" />
+          </padding>
+        </Button>
+        <Label prefHeight="30.0" prefWidth="252.0" text="ENTERPRISE" textFill="#171717">
+          <font>
+            <Font size="13.0" />
+          </font>
+          <padding>
+            <Insets left="40.0" />
+          </padding>
+        </Label>
+        <Button fx:id="pricingButton" onMouseClicked="#onPricingButtonClicked" alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="43.0" prefWidth="252.0"
+          text="Pricing" textFill="#5b5858">
+          <font>
+            <Font size="13.0" />
+          </font>
+          <graphic>
+            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@icons/price.png" />
+              </image>
+            </ImageView>
+          </graphic>
+          <padding>
+            <Insets left="50.0" />
+          </padding>
+        </Button>
+        <Button alignment="BASELINE_LEFT" onMouseClicked="#onMessagesButtonClicked" graphicTextGap="10.0" prefHeight="43.0" prefWidth="252.0"
+          text="Messages" textFill="#5b5858">
+          <font>
+            <Font size="13.0" />
+          </font>
+          <graphic>
+            <ImageView accessibleText="Project List" fitHeight="16.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@icons/message.png" />
+              </image>
+            </ImageView>
+          </graphic>
+          <padding>
+            <Insets left="50.0" />
+          </padding>
+        </Button>
+        <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="43.0" prefWidth="252.0"
+          text="Car park" onMouseClicked="#onCarParkButtonClicked" textFill="#5b5858">
+          <font>
+            <Font size="13.0" />
+          </font>
+          <graphic>
+            <ImageView accessibleText="Project List" fitHeight="16.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@icons/car.png" />
+              </image>
+            </ImageView>
+          </graphic>
+          <padding>
+            <Insets left="50.0" />
+          </padding>
+        </Button>
+
+        <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="43.0" prefWidth="252.0"
+          text="My Team" onMouseClicked="#onMyteamButtonClicked" textFill="#5b5858">
+          <font>
+            <Font size="13.0" />
+          </font>
+          <graphic>
+            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@icons/team.png" />
+              </image>
+            </ImageView>
+          </graphic>
+          <padding>
+            <Insets left="50.0" />
+          </padding>
+        </Button>
+      </children>
+    </VBox>
+    <Pane layoutX="71.0" layoutY="44.0" prefHeight="131.0" prefWidth="142.0" style="-fx-background-color: #fff;">
+      <children>
+        <ImageView fitHeight="120.0" fitWidth="139.0" layoutX="5.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@icons/icon.png" />
+          </image>
+        </ImageView>
+      </children>
+      <effect>
+        <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0" />
+      </effect>
+    </Pane>
+
+    <AnchorPane fx:id="mainPane"  style="-fx-background-color: lightgray" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="182.0">
+
+    </AnchorPane>
+
+  </children>
+</AnchorPane>
+

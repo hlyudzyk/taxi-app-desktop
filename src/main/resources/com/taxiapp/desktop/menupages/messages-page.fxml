@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.shape.Rectangle?>
+<HBox xmlns="http://javafx.com/javafx"
+  xmlns:fx="http://javafx.com/fxml"
+  fx:controller="com.taxiapp.desktop.menupages.MessagesPageController"
+  AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+  AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"
+  style="-fx-background-color: lightgreen">
+
+  <VBox prefWidth="400" style="-fx-background-color: lightyellow">
+    <Separator prefWidth="400" prefHeight="3"/>
+    <Label text="Select recipients:"/>
+    <HBox>
+      <CheckBox fx:id="adminsCheckBox" text="Admins"/>
+      <CheckBox fx:id="usersCheckBox" text="Users"/>
+      <CheckBox fx:id="driversCheckBox" text="Drivers"/>
+    </HBox>
+
+    <HBox prefHeight="70">
+      <TextField fx:id="messageSubject" HBox.hgrow="ALWAYS"/>
+      <Button fx:id="sendMessageButton" onMouseClicked="#sendMessage" text="Create" prefWidth="80"/>
+    </HBox>
+    <TextArea fx:id="messageContent" VBox.vgrow="ALWAYS"/>
+  </VBox>
+
+  <ScrollPane HBox.hgrow="ALWAYS">
+    <VBox fx:id="messagesBox" minHeight="800" minWidth="1000" style="-fx-background-color: lightblue">
+
+    </VBox>
+  </ScrollPane>
+
+</HBox>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.web.WebView?>
+<HBox xmlns="http://javafx.com/javafx"
+  xmlns:fx="http://javafx.com/fxml"
+  fx:controller="com.taxiapp.desktop.menupages.dashboard.infopages.NewOrderPageController"
+  prefHeight="400.0" prefWidth="600.0"
+  fx:id="mainBox"
+  style="-fx-background-color: lightgray" spacing="2">
+  <VBox fx:id="inputBox" minWidth="300.0" spacing="5" alignment="TOP_CENTER">
+    <Label text="New Order" style="-fx-font-size: 30" prefHeight="40"/>
+    <ComboBox fx:id="userComboBox"/>
+    <Label text="Pickup location"/>
+    <TextField fx:id="pickupLocationText"/>
+    <Label text="Delivery location"/>
+    <TextField fx:id="deliveryLocationText"/>
+    <Label text="Taxi type"/>
+    <ComboBox fx:id="taxiTypeComboBox"/>
+    <Button fx:id="createOrderButton" text="Create" onMouseClicked="#createOrderButtonClicked"/>
+  </VBox>
+  <Separator orientation="VERTICAL" />
+  <VBox alignment="CENTER">
+    <Label text="Select location" style="-fx-font-size: 30" prefHeight="40" />
+    <WebView fx:id="webView" prefWidth="600" prefHeight="800"/>
+  </VBox>
+  <Separator orientation="VERTICAL" />
+
+  <VBox fx:id="userSearchBox" HBox.hgrow="ALWAYS" alignment="CENTER">
+    <Label text="Select user" style="-fx-font-size: 30" prefHeight="40"/>
+    <HBox>
+      <TextField fx:id="searchBar" prefHeight="35.0" HBox.hgrow="ALWAYS"/>
+      <Button mnemonicParsing="false" onAction="#searchUser" prefWidth="68.0" text="Search" />
+    </HBox>
+    <ListView fx:id="listView" VBox.vgrow="ALWAYS"  />
+  </VBox>
+</HBox>

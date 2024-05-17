@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.Button?>
+<HBox fx:id="rootBox" xmlns="http://javafx.com/javafx"
+  xmlns:fx="http://javafx.com/fxml"
+  fx:controller="com.taxiapp.desktop.menupages.dashboard.DriversPageController"
+  AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+  AnchorPane.topAnchor="0.0"  AnchorPane.bottomAnchor="0.0">
+
+  <VBox fx:id="contentBox"
+    HBox.hgrow="ALWAYS" spacing="20.0" style="-fx-background-color: #000;" />
+  <VBox fx:id="filterBox" minWidth="150" style="-fx-background-color: LIGHTGRAY">
+    <Button fx:id="newDriverButton" onMouseClicked="#newDriverButtonClicked" text="New driver"/>
+  </VBox>
+</HBox>

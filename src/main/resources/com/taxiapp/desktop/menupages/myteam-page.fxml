@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.DatePicker?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+  xmlns:fx="http://javafx.com/fxml"
+  fx:controller="com.taxiapp.desktop.menupages.TeamPageController"
+  AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+  AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"
+  style="-fx-background-color: lightyellow">
+
+  <VBox prefWidth="350" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0"
+    style="-fx-background-color: lightgray" alignment="TOP_CENTER"  spacing="5">
+      <ImageView>
+        <image>
+          <Image requestedWidth="100" requestedHeight="100" url="@../icons/team.png"/>
+        </image>
+      </ImageView>
+
+      <Label text="Register Admin" style="-fx-font-size: 25"/>
+      <TextField fx:id="adminFirstName" promptText="First name"/>
+      <TextField fx:id="adminLastName" promptText="Last name"/>
+      <TextField fx:id="adminEmail" promptText="Email"/>
+      <DatePicker fx:id="birthdayPicker"/>
+      <PasswordField fx:id="adminPassword" promptText="Password"/>
+      <Button fx:id="registerButton" prefWidth="150" text="Register" onMouseClicked="#registerButtonClicked" />
+  </VBox>
+
+  <HBox fx:id="adminsBox" spacing="10" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="0.0" style="-fx-background-color: lightgray"/>
+</AnchorPane>

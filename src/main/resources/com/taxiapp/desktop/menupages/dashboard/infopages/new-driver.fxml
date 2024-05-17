@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox xmlns="http://javafx.com/javafx"
+  xmlns:fx="http://javafx.com/fxml"
+  fx:controller="com.taxiapp.desktop.menupages.dashboard.infopages.NewDriverPageController"
+  style="-fx-background-color: lightgray">
+
+  <VBox fx:id="inputBox" minWidth="300.0" spacing="5" alignment="TOP_CENTER">
+    <Label text="Register Driver" style="-fx-font-size: 25"/>
+    <TextField fx:id="driverFirstName" promptText="First name"/>
+    <TextField fx:id="driverLastName" promptText="Last name"/>
+    <TextField fx:id="driverEmail" promptText="Email"/>
+    <DatePicker fx:id="birthdayPicker"/>
+    <PasswordField fx:id="driverPassword" promptText="Password"/>
+    <Button fx:id="registerButton" prefWidth="150" text="Register" onMouseClicked="#registerButtonClicked" />
+  </VBox>
+</HBox>

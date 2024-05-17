@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+  xmlns:fx="http://javafx.com/fxml"
+  fx:controller="com.taxiapp.desktop.menupages.dashboard.DashboardPageController"
+  prefHeight="800.0" prefWidth="810.0" style="-fx-background-color: blue" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+  AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+  <TabPane  stylesheets="@../../style.css" tabClosingPolicy="UNAVAILABLE">
+      <Tab fx:id="ordersTab" styleClass="tab-pane"  text="Orders" >
+      </Tab>
+      <Tab fx:id="usersTab"  styleClass="tab-pane"   text="Users">
+      </Tab>
+      <Tab fx:id="driversTab" styleClass="tab-pane"  text="Drivers">
+      </Tab>
+  </TabPane>
+
+  <AnchorPane fx:id="dashboardMainPane" VBox.vgrow="ALWAYS" style="-fx-background-color: orange">
+
+  </AnchorPane>
+</VBox>

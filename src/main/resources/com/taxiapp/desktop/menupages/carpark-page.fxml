@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import atlantafx.base.controls.MaskTextField?>
+<HBox  fx:id="rootBox" xmlns="http://javafx.com/javafx"
+  xmlns:fx="http://javafx.com/fxml"
+  fx:controller="com.taxiapp.desktop.menupages.dashboard.CarParkController"
+  AnchorPane.leftAnchor="0.0"
+  AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"  AnchorPane.bottomAnchor="0.0">
+
+  <VBox fx:id="inputBox" prefWidth="300.0" spacing="5" alignment="TOP_CENTER" style="-fx-background-color: lightgray">
+    <Label text="Add new car" style="-fx-font-size: 30" prefHeight="40"/>
+    <Label text="Manufacturer"/>
+    <TextField fx:id="manufacturerText"/>
+    <Label text="Model"/>
+    <TextField fx:id="modelText"/>
+    <Label text="Car plate"/>
+    <MaskTextField  fx:id="carPlateText" mask="AA9999AA"/>
+    <ComboBox fx:id="driverIdComboBox"/>
+    <Spinner fx:id="carYearSpinner" initialValue="1995" amountToStepBy="1" prefWidth="120" editable="true"/>
+    <Button fx:id="saveCarButton" text="Save" onMouseClicked="#saveCarButtonClicked"/>
+  </VBox>
+
+  <ScrollPane fx:id="scrollPane" HBox.hgrow="ALWAYS">
+    <VBox fx:id="contentBox" spacing="20.0" style="-fx-background-color: #000;" />
+  </ScrollPane>
+
+
+  <AnchorPane  style="-fx-background-color: LIGHTGRAY">
+    <VBox fx:id="filterBox" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" minWidth="150.0" spacing="5" alignment="TOP_CENTER">
+      <Label text="Filter Options"/>
+      <TextField fx:id="carIdText" promptText="Car id"/>
+      <TextField fx:id="" promptText="Car plate"/>
+      <ComboBox fx:id="carStatusComboBox" prefWidth="150"/>
+      <Button text="Filter" prefWidth="150"/>
+    </VBox>
+  </AnchorPane>
+
+</HBox>
