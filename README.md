@@ -2,6 +2,13 @@
 
 This project is a desktop application for taxi operators, developed using JavaFX. It allows operators to manage orders, drivers, and customers effectively. The application integrates with a backend server to provide real-time data and functionalities.
 
+## Interface
+
+![image](https://github.com/hlyudzyk/taxi-app-desktop/assets/141021338/557f71d7-6c87-44cd-b179-80cb488c9426)
+
+![image](https://github.com/hlyudzyk/taxi-app-desktop/assets/141021338/9c374889-71de-4b1b-bc55-183ce748f7a6)
+
+
 ## Features
 
 - **Order Management**: Create, view, and filter taxi orders.
